@@ -1,0 +1,30 @@
+{
+    "name": "@bryopsida/eureka-k3s-operator",
+    "version": "0.1.0",
+    "description": "",
+    "main": "src/lib.mjs",
+    "bin": "dist/app.cjs",
+    "type": "module",
+    "homepage": "https://github.com/bryopsida/eureka-k3s-operator/tree/main/node",
+    "bugs": "https://github.com/bryopsida/eureka-k3s-operator/issues",
+    "repository": "github:bryopsida/eureka-k3s-operator",
+    "scripts": {
+      "test": "node --test tests/* tests/**/*  tests/**/**/*",
+      "start:dev": "nodemon --inspect src/app.mjs",
+      "lint": "standard",
+      "lint:fix": "standard --fix",
+      "build:js": "npx esbuild src/app.mjs --bundle --outfile=dist/app.cjs --format=cjs --platform=node",
+      "prepare": "npm run build:js"
+    },
+    "author": "",
+    "license": "Unlicense",
+    "dependencies": {
+      "@bryopsida/eureka-operator": "^0.1.0"
+    },
+    "devDependencies": {
+      "esbuild": "^0.21.0",
+      "nodemon": "^3.1.0",
+      "standard": "^17.1.0"
+    }
+  }
+  
